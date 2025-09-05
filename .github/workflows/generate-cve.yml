@@ -105,6 +105,8 @@ jobs:
 
       - name: Tag
         run: |
+          git config --global user.email "jahziel@fleetdm.com"
+          git config --global user.name "Jahziel Villasana"
           git tag -a cve-${{ steps.date.outputs.date }} -m "release ${{ steps.date.outputs.date }}"
           git push origin cve-${{ steps.date.outputs.date }}
 
